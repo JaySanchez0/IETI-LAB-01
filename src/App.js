@@ -9,7 +9,8 @@ class App extends React.Component {
     super(props);
     this.state = [[{text:"Learn React", priority:5, dueDate: new Date() },
     {text:"Learn about APIs", priority:4, dueDate: new Date(2020,1,23) },
-    {text:"write TODO App", priority:3, dueDate: new Date(2020,1,30) }],{text:'',date:null,priority:0}];
+    {text:"write TODO App", priority:3, dueDate: new Date(2020,1,30) }],
+    {text:'',dueDate:null,priority:0}];
     this.changeText= this.changeText.bind(this);
     this.changePriority= this.changePriority.bind(this);
     this.changeDate=this.changeDate.bind(this);
@@ -27,7 +28,7 @@ class App extends React.Component {
           </p>
             Text: <input type="text" onChange={this.changeText} value={this.state.text}></input>
             priority: <input type="number" onChange={this.changePriority} value={this.state.priority}></input>
-            Date: <input type="date" onChange={this.changeDate} value={this.state.date}></input>
+            Date: <input type="date" onChange={this.changeDate} value={this.state.dueDate}></input>
             <button onClick={this.submit}>Add</button>
           <TodoList todoList={todos}></TodoList>
           <a
@@ -47,7 +48,8 @@ class App extends React.Component {
     this.setState(this.state)
   }
   changeDate(e){
-    this.state[1].date= e.target.value;
+    console.log(e);
+    this.state[1].dueDate= e.target.value;
     this.setState(this.state)
   }
   changePriority(e){
