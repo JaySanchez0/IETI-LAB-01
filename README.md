@@ -1,3 +1,11 @@
+### Presentado por:
+
+Jeisson G. Sanchez R.
+
+### Enlace a el enunciado del lab
+
+[ver](https://github.com/ieti-eci/1.1-react-intro)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
